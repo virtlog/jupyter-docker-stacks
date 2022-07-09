@@ -3,12 +3,12 @@
 
 # Ubuntu 20.04 (focal)
 # https://hub.docker.com/_/ubuntu/?tab=tags&name=focal
-ARG ROOT_CONTAINER=ubuntu:focal
+ARG ROOT_CONTAINER=nvidia/cuda:11.6.2-cudnn8-devel-ubuntu20.04
 
 FROM $ROOT_CONTAINER
 
-LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
-ARG NB_USER="jovyan"
+LABEL maintainer="Qin Li <li@virtlog.com>"
+ARG NB_USER="jupyter"
 ARG NB_UID="1000"
 ARG NB_GID="100"
 

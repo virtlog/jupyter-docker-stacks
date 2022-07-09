@@ -4,7 +4,7 @@
 
 # Use bash for inline if-statements in arch_patch target
 SHELL:=bash
-OWNER?=jupyter
+OWNER?=virtlog
 
 # Need to list the images in build dependency order
 # All of the images
@@ -16,7 +16,11 @@ ALL_IMAGES:= \
 	tensorflow-notebook \
 	datascience-notebook \
 	pyspark-notebook \
-	all-spark-notebook
+	all-spark-notebook \
+	sage-notebook \
+	rust-notebook \
+	dotnet-notebook \
+	discoart-notebook
 
 # Enable BuildKit for Docker build
 export DOCKER_BUILDKIT:=1

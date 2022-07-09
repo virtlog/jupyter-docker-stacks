@@ -6,7 +6,7 @@ ARG OWNER=jupyter
 ARG BASE_CONTAINER=$OWNER/base-notebook:807999a41207
 FROM $BASE_CONTAINER
 
-LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
+LABEL maintainer="Qin Li <li@virtlog.com>"
 
 # Fix: https://github.com/hadolint/hadolint/wiki/DL4006
 # Fix: https://github.com/koalaman/shellcheck/wiki/SC3014

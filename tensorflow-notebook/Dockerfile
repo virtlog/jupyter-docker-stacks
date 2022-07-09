@@ -4,11 +4,15 @@ ARG OWNER=jupyter
 ARG BASE_CONTAINER=$OWNER/scipy-notebook
 FROM $BASE_CONTAINER
 
-LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
+LABEL maintainer="Qin Li <li@virtlog.com>"
 
 # Fix: https://github.com/hadolint/hadolint/wiki/DL4006
 # Fix: https://github.com/koalaman/shellcheck/wiki/SC3014
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+# Install PyTorch
+RUN pip install \
+    torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
 
 # Install Tensorflow
 RUN mamba install --quiet --yes \
